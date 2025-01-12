@@ -8,24 +8,37 @@
     <title>Working with Nodes</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML template.</p>
-    <section>
+    <section id="AddTermForm">
+      <legend for="addNewStuffContainer"><h1 class="center">Please enter terms to add.</h1></legend>  
         <div id="addNewStuffContainer">
-        
+        <div class="centerInsideSectionForms">
+
         <label for="addNewTerm">Term:</label><input name="addNewTerm" id="termInput" type="text"> 
         <label for="termEffectiveDate">Term goes into effect when:</label><input name="termEffectiveDate" id="termEffectiveDate" type="date">
         <label for="Penalty">Penalty:</label><input name="Penalty" id="Penalty" type="text">
-            <button id="submitTerm">Submit Term</button> 
+
+        </div>    
+        <button id="submitTerm">Add Term</button>
         </div>
-            <form action="POST">
+            <div class="TermsCenter"> 
+
+            <form class="centerForm">
+                <fieldset> 
             <ul id="practiceList">Terms and Conditions
 
             </ul>
+        </div>
+        </fieldset>
+            
+                
+            
 
-            <input type="submit"> </input>
         </form>
+        <button class="centerBtn" id="commitTerms" >Submit</button>
+        <p id="commitTermsVerificationTxt"></p>
     </section>
 </body>
 <script src="script.js"> </script>
 </html>
+
+<!--TODO:add modal for confirming terms--> 

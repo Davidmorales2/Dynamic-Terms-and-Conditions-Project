@@ -1,30 +1,53 @@
 #addNewStuffContainer {
+    width: 500px;
     margin: auto;
-    flex-direction: column;
-    width:100%;
-    display: flex;
+    margin-bottom: 10px;
 }
 
+
 body{
-    background-color: black;
+    list-style-position: inside;
+    font-family: sans-serif;
 }
 
 section {
     padding: 10px;
-    background-color: aliceblue;
-    width: 30%;
-    margin: auto;
+    box-shadow: 5px, 10px, rgb(117, 117, 117);
+    background-color: whitesmoke;
+    width: 587px;
+    margin: 5% auto;
     border-radius: 10px;
 }
 
-form{
-    display: block;
+.center {
     text-align: center;
-    margin: auto;
-    list-style-position: inside;
+}
+button {
+    display: block;
+    margin:5px auto;
+    border-radius: 5px;
 }
 
-button {
-    border-radius: 5px;
-    text-decoration: none;
+.centerInsideSectionForms {
+    display: flex;
+    flex-direction: column;
+}
+
+.TermsCenter {
+    width: 60%;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+#commitTermsVerificationTxt{
+    margin-top:2px;
+    color:orangered;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+
+fieldset{
+    border-color: rgba(255,255,255,0.5);
 }
