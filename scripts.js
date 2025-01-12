@@ -1,3 +1,0 @@
-
-const peopleArray = [ //add objects
-];
