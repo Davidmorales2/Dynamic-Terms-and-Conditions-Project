@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Nodes</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a basic HTML template.</p>
+    <section>
+        <div id="addNewStuffContainer">
+        
+        <label for="addNewTerm">Term:</label><input name="addNewTerm" id="termInput" type="text"> 
+        <label for="termEffectiveDate">Term goes into effect when:</label><input name="termEffectiveDate" id="termEffectiveDate" type="date">
+        <label for="Penalty">Penalty:</label><input name="Penalty" id="Penalty" type="text">
+            <button id="submitTerm">Submit Term</button> 
+        </div>
+            <form action="POST">
+            <ul id="practiceList">Terms and Conditions
+
+            </ul>
+
+            <input type="submit"> </input>
+        </form>
+    </section>
+</body>
+<script src="script.js"> </script>
+</html>
