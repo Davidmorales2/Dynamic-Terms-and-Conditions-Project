@@ -1,0 +1,13 @@
+body {
+    background-color: cadetblue;
+    color: wheat;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+#loremIpsumSample {
+    border:2px solid black;
+}
