@@ -6,11 +6,14 @@ const commit = document.getElementById("commitTerms");
 const submitTermBtn = document.getElementById("submitTerm");
 const commitTermsVerification = document.getElementById("commitTermsVerificationTxt");
 
-const termList = ["No swearing", "No complaining", "no farting", "no breathing", "standing still cost 1 dollar"];
-
-(()=> { //initialize Original Term list 
+const termList = [];
+//TODO: ADD REMOVE AND EDIT BUTTON USING MODALS
+(()=> { //initialize Term list from local storage 
+    termList.push(localStorage.getItem(JSON.parse(localStorage.getItem("TermsAndConditionDataPractice"))));
+    
     for(let terms of termList)
     {
+        
         let tmpItm = document.createElement("li");
         tmpItm.textContent = terms;
        practicelist.appendChild(tmpItm);
@@ -31,6 +34,11 @@ function newTerm(Term, EffectiveDate, Penalty) //create an object for a term
     this.Penalty = Penalty;
 }
 
+function commitChangeConfirm()
+{
+
+    localStorage.setItem("TermsAndConditionDataPractice",JSON.stringify(termList));
+}
 
 function submitTerm()
 {
@@ -48,7 +56,7 @@ function submitTerm()
         practicelist.appendChild(termChild); //attach the element to the parent list
         console.log(termList);
         clrText();
-        commit.addEventListener("click",()=>{commitTermsVerification.innerText="Terms committed to database!";});
+        commit.addEventListener("click",()=>{commitTermsVerification.innerText="Terms committed to database!"; commitChangeConfirm();}); //just leaving this like this for testing
 }
 }
 
